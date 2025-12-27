@@ -2,11 +2,11 @@
 
 ## Konfiguracja Codex
 
-Skopiowanie zawartości z [.codex](https://github.com/growdelan/codex_flow/blob/main/.codex)
+Skopiowanie zawartości z [.codex](https://github.com/growdelan/codex_flow/blob/main/.codex) do swojego `~/.codex/`
   
 ## 1. PRD w GPT  
   
-Poprosić o PRD do nowego projektu za pomocą promptu:  
+Poprosić o PRD do nowego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis:  
 ```
 Jesteś ekspertem w tworzeniu dokumentów PRD (Product Requirements Document) dla aplikacji.
 
@@ -20,9 +20,9 @@ Gdy będziesz miał wystarczający kontekst, przejdź do utworzenia dokumentu w 
 Na koniec poprosić aby podsumował cała aplikację tylko jednym zdaniem. (Przyda się za chwile)  
   
 ## 2. Utworzenie repozytorium projektu  
-* Tworzymy czyste repozytorium tylko z **README.md **i pobieramy na dysk.  
-* Po pobraniu edytujemy plik **README.md** i wklejamy do niego to pojedyncze zdanie na temat naszej aplikacji które wygenerował **GPT** i zapisujemy.  
-* Uruchamiamy **Codex** i inicjujemy komendą **/init**  co utworzy plik **AGENTS.md**  
+* Tworzymy czyste repozytorium tylko z `README.md `i pobieramy na dysk.  
+* Po pobraniu edytujemy plik `README.md` i wklejamy do niego to pojedyncze zdanie na temat naszej aplikacji które wygenerował `GPT` i zapisujemy.  
+* Uruchamiamy `Codex` i inicjujemy komendą `/init`  co utworzy plik `AGENTS.md`  
   
 Zostajemy w Codex i uruchamiamy prompt `/prompts:start-new-project`:  
 ```
@@ -67,7 +67,7 @@ Nie zmieniaj kodu.
 Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.  
   
 ## 3. Rozpoczęcie projektu  
-W Repozytorium tworzymy plik **PRD.md** z naszym PRD utworzonym przez **GPT** i zapisujemy w katalogu głównym.  
+W Repozytorium tworzymy plik `PRD.md` z naszym PRD utworzonym przez `GPT` i zapisujemy w katalogu głównym.  
   
 Następnie w Codex uruchamiamy prompt `/prompts:generate-spec-from-prd`:  
 ```
@@ -87,10 +87,10 @@ Nie zmieniaj kodu.
 
 ```
   
-Po tej czynności sprawdzamy pliki **spec.md** i **ROADMAP.md.** Jeśli coś trzeba poprawić zróbmy to, ale przez **Codex**, niech sam poprawi.  
+Po tej czynności sprawdzamy pliki `spec.md` i `ROADMAP.md`. Jeśli coś trzeba poprawić zróbmy to, ale przez `Codex`, niech sam poprawi.  
   
 ## 4. Milestone 0.5  
-Jeśli w **ROADMAP.md **Codex sam nie zaproponował milestone 0.5, robimy to za pomocą promptu ` /prompts:create-milestone-05`:  
+Jeśli w `ROADMAP.md `Codex sam nie zaproponował milestone 0.5, robimy to za pomocą promptu `/prompts:create-milestone-05`:  
 ```
 Dodaj do `ROADMAP.md` nowy milestone przed wszystkimi innymi:
 
@@ -172,7 +172,7 @@ Nie zmieniaj kodu.
 ```
   
 ## 7. Rozpoczęcie nowego kontekstu - np. Gdy mamy nowy PRD  
-Nowy kontekst rozpoczynamy promptem sprawdzającym czy Codex wie w jakim jest miejscu i co to za projekt ` /prompts:continue-project`:  
+Nowy kontekst rozpoczynamy promptem sprawdzającym czy Codex wie w jakim jest miejscu i co to za projekt `/prompts:continue-project`:  
 ```
 To jest kontynuacja istniejącego projektu.
 
@@ -194,7 +194,7 @@ Po przeczytaniu:
 - nic nie implementuj
 
 ```
-Jeśli daliśmy nowy PRD, to aktualizujemy **spec.md **i **ROADMAP.md** promptem `/prompts:next-prd`  
+Jeśli daliśmy nowy PRD, to aktualizujemy `spec.md `i `ROADMAP.md` promptem `/prompts:next-prd`  
 ```
 Na podstawie nowej funkcjonalności opisanej w pliku `PRD.md`:
 
