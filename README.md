@@ -2,7 +2,7 @@
 
 ## Konfiguracja Codex
 
-Skopiowanie zawartości z [.codex](https://github.com/growdelan/codex_flow/blob/main/.codex) do swojego `~/.codex/`
+Skopiowanie zawartości z [.codex](https://github.com/growdelan/codex_flow/blob/main/.codex) do swojego `~/.codex/` (domyślnie wykorzstanie `Pythona` + `UV`)
   
 ## 1. PRD w GPT  
   
