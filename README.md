@@ -61,7 +61,6 @@ Zakres:
 
 Nie uzupełniaj treści merytorycznej.
 Nie zmieniaj kodu.
-
 ```
   
 Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.  
@@ -107,7 +106,6 @@ Definition of Done:
 - brak placeholderów
 
 Zapisz zmiany do `ROADMAP.md`.
-
 ```
 Gdy jest gotowy implementujemy go `/prompts:implement-milestone-0-5`:  
 ```
@@ -121,7 +119,6 @@ Zasady:
 Po zakończeniu:
 - upewnij się, że działa
 - zrób commit z czytelnym opisem
-
 ```
 Po implementacji i sprawdzeniu czy działa czyli testy / ręczne uruchomienie i zatwierdzamy zmiany `/prompts:finalize-and-push-change`:  
 ```
@@ -140,7 +137,6 @@ Jeśli pojawiły się nowe decyzje/zmiany założeń:
 
 Nie zmieniaj kodu.
 Zrób commit i push.
-
 ```
 To będzie nasza baza na której będziemy pracować, takie nasze „Hello World” dla obecnego projektu.  
   
@@ -148,7 +144,6 @@ To będzie nasza baza na której będziemy pracować, takie nasze „Hello World
 Każdy kolejny milestone wyzwalamy przez `/prompts:implement-milestone`:  
 ```
 Zaimplementuj kolejny milestone ze `ROADMAP.md`: Milestone <numer_milestone>
-
 ```
 I zatwierdzamy zmiany identycznie jak w przypadku Milestone 0.5 (==PO SPRAWDZENIU CZY DZIAŁA!==)  
   
@@ -168,7 +163,6 @@ Zrób porządek:
 4. Upewnij się, że wszystko jest commitowane.
 
 Nie zmieniaj kodu.
-
 ```
   
 ## 7. Rozpoczęcie nowego kontekstu - np. Gdy mamy nowy PRD  
@@ -192,7 +186,6 @@ Po przeczytaniu:
 - krótko streść projekt
 - wymień aktualny milestone do realizacji
 - nic nie implementuj
-
 ```
 Jeśli daliśmy nowy PRD, to aktualizujemy `spec.md `i `ROADMAP.md` promptem `/prompts:next-prd`  
 ```
@@ -206,7 +199,6 @@ Na podstawie nowej funkcjonalności opisanej w pliku `PRD.md`:
   - krótki opis zakresu
 
 Nie zmieniaj kodu.
-
 ```
 Po tym zabiegu, powtarzamy standardowe kroki z implementacją poszczególnych milestone’ów.  
 
