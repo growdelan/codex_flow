@@ -15,7 +15,6 @@ Chciałbym stworzyć PRD dla [nazwa lub krótki opis produktu/usługi].
 Przeprowadź ze mną wywiad – zadawaj mi pytania jedno po drugim, aż poznasz cały potrzebny kontekst do stworzenia dokumentu dla mojej aplikacji. 
 
 Gdy będziesz miał wystarczający kontekst, przejdź do utworzenia dokumentu w formacie markdown.
-
 ```
 Na koniec poprosić aby podsumował cała aplikację tylko jednym zdaniem. (Przyda się za chwile)  
   
@@ -83,7 +82,6 @@ Wynik zapisz do plików:
 - `ROADMAP.md` — roadmapa z milestone’ami
 
 Nie zmieniaj kodu.
-
 ```
   
 Po tej czynności sprawdzamy pliki `spec.md` i `ROADMAP.md`. Jeśli coś trzeba poprawić zróbmy to, ale przez `Codex`, niech sam poprawi.  
