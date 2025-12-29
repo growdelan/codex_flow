@@ -7,8 +7,12 @@ Zaimplementuj Milestone 0.5 dokładnie zgodnie z `ROADMAP.md`.
 Zasady:
 - minimalna ilość kodu
 - brak optymalizacji
-- jeśli coś jest niejasne, podejmij prostą decyzję i opisz ją w komentarzu
+- brak refactorów niezwiązanych z milestone’em
+- jeśli coś jest niejasne:
+  - podejmij najprostszą decyzję
+  - opisz ją w `spec.md` w sekcji `## Decyzje techniczne`
 
 Po zakończeniu:
-- upewnij się, że działa
+- upewnij się, że aplikacja się uruchamia
+- uruchom testy
 - zrób commit z czytelnym opisem
