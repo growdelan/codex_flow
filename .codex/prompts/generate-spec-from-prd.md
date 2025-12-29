@@ -22,13 +22,8 @@ CZĘŚĆ 2 — Roadmapa
     - Cel
     - Definition of Done
     - Zakres
-11. Milestone’y mają być:
-    - jasno nazwane
-    - możliwe do zrealizowania iteracyjnie
-    - bez szczegółów implementacyjnych
 
-Zasady ogólne:
+Zasady:
 - Nie zmieniaj struktury `spec.md` ani `ROADMAP.md`.
 - Nie zmieniaj kodu.
-- Nie dodawaj zależności ani architektury, jeśli nie są jednoznacznie wymagane przez PRD.
 - Jeśli coś jest niejednoznaczne, użyj `TODO` zamiast zgadywania.
