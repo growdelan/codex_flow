@@ -79,20 +79,11 @@ Wspólne wymagania jakościowe dla całego projektu.
 ====================
 
 `ROADMAP.md` ma zawierać DOKŁADNIE poniższy szablon.
-Nie zmieniaj nagłówków, nazw sekcji ani kolejności.
+Nie zmieniaj struktury ani statusów.
 Nie uzupełniaj treści merytorycznej.
 
+====================
 # Roadmapa (milestones)
-
-Ten dokument definiuje:
-- kolejność prac
-- zakres poszczególnych milestone’ów
-- status realizacji
-
-Szczegóły architektury i decyzji technicznych znajdują się w `spec.md`.
-Aktualny stan projektu znajduje się w `STATUS.md`.
-
----
 
 ## Statusy milestone’ów
 Dozwolone statusy:
@@ -100,8 +91,6 @@ Dozwolone statusy:
 - in_progress
 - done
 - blocked
-
-Nie używaj innych statusów.
 
 ---
 
@@ -129,25 +118,30 @@ Zakres:
 ## Milestone <numer>: <nazwa> (<status>)
 
 Cel:
-- jasno opisany efekt biznesowy lub techniczny
-
 Definition of Done:
-- kryteria jednoznacznie potwierdzające ukończenie
-- testy adekwatne do zakresu
-- brak nieukończonych elementów
-
 Zakres:
-- lista elementów objętych milestone’em
-- bez szczegółów implementacyjnych
-
 Uwagi:
-- (opcjonalnie) ryzyka, zależności, decyzje do podjęcia
 
-`STATUS.md` ma zawierać:
-# Aktualny stan
-- co działa:
-- co jest skończone:
-- co jest następne:
+====================
 
+`STATUS.md` ma zawierać DOKŁADNIE poniższy szablon.
 Nie uzupełniaj treści merytorycznej.
+
+====================
+# Aktualny stan projektu
+
+## Co działa
+
+## Co jest skończone
+
+## Co jest w trakcie
+
+## Co jest następne
+
+## Blokery i ryzyka
+
+## Ostatnie aktualizacje
+
+====================
+
 Nie zmieniaj kodu.
