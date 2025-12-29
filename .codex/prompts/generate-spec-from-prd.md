@@ -4,24 +4,31 @@ description: Generuje z PRD nowe pliki spec.md i ROADMAP.md
 
 Na podstawie pliku `PRD.md`:
 
+CZĘŚĆ 1 — Specyfikacja
 1. Wypełnij treścią istniejący plik `spec.md`, korzystając z jego OBECNEJ struktury.
 2. Nie zmieniaj nagłówków, nazw sekcji ani kolejności w `spec.md`.
-3. Uzupełnij każdą sekcję na poziomie wysokim (bez detali implementacyjnych).
+3. Uzupełnij każdą sekcję na poziomie wysokim (bez szczegółów implementacyjnych).
 4. Jeśli którejś sekcji nie da się uzupełnić na podstawie PRD:
    - zostaw krótką notatkę `TODO` z opisem brakującej informacji.
+5. Decyzje techniczne wpisuj wyłącznie do sekcji `## Decyzje techniczne`
+   i tylko jeśli wynikają bezpośrednio z PRD.
 
-Dodatkowo:
-5. Zaproponuj roadmapę w formie jasno nazwanych milestone’ów.
-6. Każdy milestone ma mieć:
-   - cel
-   - kryteria „Definition of Done”
-   - krótki opis zakresu
+CZĘŚĆ 2 — Roadmapa
+6. Wypełnij istniejący plik `ROADMAP.md`, zachowując jego strukturę.
+7. Nie zmieniaj nazw sekcji ani dozwolonych statusów milestone’ów.
+8. Zachowaj Milestone 0.5 jako pierwszy element roadmapy.
+9. Dodaj kolejne milestone’y po Milestone 0.5.
+10. Każdy milestone musi zawierać:
+    - Cel
+    - Definition of Done
+    - Zakres
+11. Milestone’y mają być:
+    - jasno nazwane
+    - możliwe do zrealizowania iteracyjnie
+    - bez szczegółów implementacyjnych
 
-Wynik zapisz do plików:
-- `spec.md` — wypełniona specyfikacja wysokiego poziomu
-- `ROADMAP.md` — roadmapa z milestone’ami
-
-Zasady:
-- Nie zmieniaj struktury `spec.md`.
+Zasady ogólne:
+- Nie zmieniaj struktury `spec.md` ani `ROADMAP.md`.
 - Nie zmieniaj kodu.
-- Nie dodawaj zależności ani decyzji implementacyjnych bez wyraźnego uzasadnienia w `## Decyzje techniczne`.
+- Nie dodawaj zależności ani architektury, jeśli nie są jednoznacznie wymagane przez PRD.
+- Jeśli coś jest niejednoznaczne, użyj `TODO` zamiast zgadywania.
