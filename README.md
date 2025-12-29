@@ -25,24 +25,81 @@ Na koniec poprosić aby podsumował cała aplikację tylko jednym zdaniem. (Przy
   
 Zostajemy w Codex i uruchamiamy prompt `/prompts:start-new-project`:  
 ```
-Utwórz pliki `spec.md`, `ROADMAP.md` i `STATUS.md` jako puste szablony w ustalonym układzie.
+Utwórz pliki `spec.md`, `ROADMAP.md` i `STATUS.md` jako szablony w ustalonym układzie.
 
-`spec.md` ma zawierać:
+`spec.md` ma zawierać DOKŁADNIE poniższy szablon.
+Nie zmieniaj nazw sekcji, nagłówków ani kolejności.
+Nie uzupełniaj treści merytorycznej.
+
+====================
 # Specyfikacja techniczna
 
 ## Cel
+Krótki opis celu aplikacji:
+- jaki problem rozwiązuje
+- dla kogo
+- w jakim zakresie (co jest poza zakresem)
 
-## Architektura i przeplyw danych
-1.
-2.
-3.
+---
+
+## Zakres funkcjonalny (high-level)
+Opis funkcjonalności na wysokim poziomie:
+- kluczowe use-case’i
+- główne przepływy użytkownika
+- czego aplikacja **nie** robi
+
+Bez wchodzenia w szczegóły implementacyjne.
+
+---
+
+## Architektura i przepływ danych
+Opis architektury na poziomie koncepcyjnym.
+
+1. Główne komponenty systemu
+2. Przepływ danych między komponentami
+3. Granice odpowiedzialności
+
+---
 
 ## Komponenty techniczne
+Lista kluczowych komponentów technicznych i ich odpowiedzialności.
 
-## Uwagi implementacyjne
+---
 
-## Roadmapa
-- Szczegoly milestone'ow i statusy znajduja sie w `ROADMAP.md`.
+## Decyzje techniczne
+Jawne decyzje techniczne wraz z uzasadnieniem.
+
+Każda decyzja powinna zawierać:
+- Decyzja:
+- Uzasadnienie:
+- Konsekwencje:
+
+---
+
+## Jakość i kryteria akceptacji
+Wspólne wymagania jakościowe dla całego projektu.
+
+---
+
+## Zasady zmian i ewolucji
+- zmiany funkcjonalne → aktualizacja `ROADMAP.md`
+- zmiany architektoniczne → aktualizacja tej specyfikacji
+- nowe zależności → wpis do `## Decyzje techniczne`
+- refactory tylko w ramach aktualnego milestone’u
+
+---
+
+## Powiązanie z roadmapą
+- Szczegóły milestone’ów i ich statusy znajdują się w `ROADMAP.md`.
+
+---
+
+## Status specyfikacji
+- Data utworzenia:
+- Ostatnia aktualizacja:
+- Aktualny zakres obowiązywania:
+
+====================
 
 `ROADMAP.md` ma zawierać:
 # Roadmapa (milestones)
@@ -52,16 +109,17 @@ Cel:
 Definition of Done:
 Zakres:
 
+Nie uzupełniaj treści merytorycznej.
+
 `STATUS.md` ma zawierać:
 # Aktualny stan
-- co dziala:
-- co jest skonczone:
-- co jest nastepne:
+- co działa:
+- co jest skończone:
+- co jest następne:
 
 Nie uzupełniaj treści merytorycznej.
 Nie zmieniaj kodu.
 ```
-  
 Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.  
   
 ## 3. Rozpoczęcie projektu  
@@ -70,18 +128,28 @@ W Repozytorium tworzymy plik `PRD.md` z naszym PRD utworzonym przez `GPT` i zapi
 Następnie w Codex uruchamiamy prompt `/prompts:generate-spec-from-prd`:  
 ```
 Na podstawie pliku `PRD.md`:
-1. Zaprojektuj specyfikację aplikacji na wysokim poziomie.
-2. Zaproponuj roadmapę w formie jasno nazwanych milestone’ów.
-3. Każdy milestone ma mieć:
+
+1. Wypełnij treścią istniejący plik `spec.md`, korzystając z jego OBECNEJ struktury.
+2. Nie zmieniaj nagłówków, nazw sekcji ani kolejności w `spec.md`.
+3. Uzupełnij każdą sekcję na poziomie wysokim (bez detali implementacyjnych).
+4. Jeśli którejś sekcji nie da się uzupełnić na podstawie PRD:
+   - zostaw krótką notatkę `TODO` z opisem brakującej informacji.
+
+Dodatkowo:
+5. Zaproponuj roadmapę w formie jasno nazwanych milestone’ów.
+6. Każdy milestone ma mieć:
    - cel
    - kryteria „Definition of Done”
    - krótki opis zakresu
 
 Wynik zapisz do plików:
-- `spec.md` — specyfikacja wysokiego poziomu
+- `spec.md` — wypełniona specyfikacja wysokiego poziomu
 - `ROADMAP.md` — roadmapa z milestone’ami
 
-Nie zmieniaj kodu.
+Zasady:
+- Nie zmieniaj struktury `spec.md`.
+- Nie zmieniaj kodu.
+- Nie dodawaj zależności ani decyzji implementacyjnych bez wyraźnego uzasadnienia w `## Decyzje techniczne`.
 ```
   
 Po tej czynności sprawdzamy pliki `spec.md` i `ROADMAP.md`. Jeśli coś trzeba poprawić zróbmy to, ale przez `Codex`, niech sam poprawi.  
