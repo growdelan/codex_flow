@@ -19,11 +19,15 @@ Gdy będziesz miał wystarczający kontekst, przejdź do utworzenia dokumentu w 
 Na koniec poprosić aby podsumował cała aplikację tylko jednym zdaniem. (Przyda się za chwile)  
   
 ## 2. Utworzenie repozytorium projektu  
-* Tworzymy czyste repozytorium tylko z `README.md `i pobieramy na dysk.  
-* Po pobraniu edytujemy plik `README.md` i wklejamy do niego to pojedyncze zdanie na temat naszej aplikacji które wygenerował `GPT` i zapisujemy.  
-* Uruchamiamy `Codex` i inicjujemy komendą `/init`  co utworzy plik `AGENTS.md`  
+* Tworzymy czyste repozytorium tylko z `README.md` i pobieramy na dysk.  
+* Po pobraniu edytujemy plik `README.md` i wklejamy do niego to pojedyncze zdanie na temat naszej aplikacji, które wygenerował `GPT`, i zapisujemy.
+
+> ⚠️ **UWAGA**  
+> Jeśli nie skopiowałeś pliku [.codex](https://github.com/growdelan/codex_flow/blob/main/.codex) do `~/.codex/`,  
+> uruchom `Codex` a następnie wykonaj komendę `/init`.  
+> Spowoduje to utworzenie domyślnego pliku `AGENTS.md`.
   
-Zostajemy w Codex i uruchamiamy prompt `/prompts:start-new-project`:  
+Uruchamiamy Codex i wykonujemy prompt `/prompts:start-new-project`:  
 ```
 Utwórz pliki `spec.md`, `ROADMAP.md` i `STATUS.md` jako szablony w ustalonym układzie.
 
