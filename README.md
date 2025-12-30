@@ -270,7 +270,7 @@ Po zakończeniu:
 I zatwierdzamy zmiany identycznie jak w przypadku Milestone 0.5 (==PO SPRAWDZENIU CZY DZIAŁA!==)  
   
 ## 6. Kończenie pracy w obrębie danego kontekstu  
-Kończymy pracę z danym kontekstem w momencie ukończenia danego milestone/po ukończeniu serii milestone’ów z danego PRD.  
+Gdy zdecydujemy się zakończyć pracę.  
   
 Używamy promptu `/prompts:project-wrap-up`:  
 ```
