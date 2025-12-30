@@ -8,7 +8,6 @@ Kontekst:
 - przeczytaj `spec.md`
 - przeczytaj `ROADMAP.md`
 - przeczytaj `STATUS.md`
-- przeczytaj `AGENTS.md`
 - zapoznaj się z aktualnym stanem repozytorium
 
 Zasady:
