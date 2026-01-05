@@ -1,8 +1,9 @@
 ---
-description: Generuje z kolejnego PRD spec.md i ROADMAP.md
+description: Generuje z kolejnego PRD - spec.md i ROADMAP.md
+argument-hint: PRD_NAME=<name>
 ---
 
-Na podstawie nowej funkcjonalności opisanej w pliku `PRD.md`:
+Na podstawie nowej funkcjonalności opisanej w pliku `prd/$PRD_NAME`:
 
 ## CZĘŚĆ 1 — Aktualizacja specyfikacji
 1. Zaktualizuj istniejący plik `spec.md`, korzystając z jego OBECNEJ struktury.
