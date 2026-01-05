@@ -167,3 +167,15 @@ jest plik `spec.md`.
 - Aktualny stan projektu: `STATUS.md`
 
 Jeśli występuje konflikt między kodem a dokumentacją — **dokumentacja wygrywa**.
+
+---
+
+## PRD (Product Requirements Documents)
+
+- PRD są przechowywane w katalogu `prd/`.
+- Każdy PRD jest niemutowalnym dokumentem wejściowym.
+- PRD nie są źródłem prawdy po ich przetworzeniu.
+- Po aktualizacji `spec.md` i `ROADMAP.md`:
+  - PRD służy wyłącznie jako kontekst historyczny.
+- W przypadku konfliktu:
+  - `spec.md` wygrywa z każdym PRD.

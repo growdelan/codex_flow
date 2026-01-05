@@ -176,11 +176,11 @@ Nie zmieniaj kodu.
 Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.  
   
 ## 3. Rozpoczęcie projektu  
-W Repozytorium tworzymy plik `PRD.md` z naszym PRD utworzonym przez `GPT` i zapisujemy w katalogu głównym.  
+W Repozytorium tworzymy katalog i plik `prd/000-initial-prd.md` z naszym PRD utworzonym przez `GPT` i zapisujemy w katalogu głównym.  
   
 Następnie w Codex uruchamiamy prompt `/prompts:generate-spec-from-prd`:  
 ```
-Na podstawie pliku `PRD.md`:
+Na podstawie pliku `prd/000-initial-prd.md`:
 
 CZĘŚĆ 1 — Specyfikacja
 1. Wypełnij treścią istniejący plik `spec.md`, korzystając z jego OBECNEJ struktury.

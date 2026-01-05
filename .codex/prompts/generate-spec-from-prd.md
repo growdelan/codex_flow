@@ -2,7 +2,7 @@
 description: Generuje z PRD nowe pliki spec.md i ROADMAP.md
 ---
 
-Na podstawie pliku `PRD.md`:
+Na podstawie pliku `prd/000-initial-prd.md`:
 
 ## CZĘŚĆ 1 — Specyfikacja
 1. Wypełnij treścią istniejący plik `spec.md`, korzystając z jego OBECNEJ struktury.
