@@ -27,7 +27,7 @@
 - Kod: w `src/` lub (dla małych projektów) w katalogu głównym.  
 - Testy tylko w `tests/`.  
 - Entrypoint: jeden, opisany w `README.md`.  
-- Dozwolone pliki główne: `README.md`, `AGENTS.md`, `spec.md`, `ROADMAP.md`, `STATUS.md`, `PRD.md`, pliki konfiguracyjne.  
+- Dozwolone pliki główne: `README.md`, `AGENTS.md`, `spec.md`, `ROADMAP.md`, `STATUS.md`, pliki konfiguracyjne.  
 - Nie dodawaj innych `.py` do root’a przy strukturze `src/`.  
 - Zmiany struktury uzasadnij i opisz w `spec.md`.
 
