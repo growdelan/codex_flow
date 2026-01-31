@@ -10,7 +10,7 @@
 - Uruchamianie: jeden entrypoint (`uv run <plik.py>` lub `python -m <pakiet>`).  
 - Komenda uruchomienia musi być w `README.md`.  
 - Zależności: `uv add <pakiet>`; każda nowa musi być uzasadniona w `spec.md` (sekcja *Decyzje techniczne*).  
-- Testy: `python -m unittest discover -s tests`.
+- Testy: `uv run python -m unittest discover -s tests`.
 
 ## Styl i Konwencje
 - Indentacja: 4 spacje.  
