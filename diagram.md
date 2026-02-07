@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 
   A[PRD w GPT] --> B[Repo plus README jedno zdanie]
@@ -26,3 +27,4 @@ flowchart TD
   N -- tak --> O[Dodaj nowy PRD.md]
   O --> P[Codex next-prd aktualizuje spec i roadmap]
   P --> I
+```
