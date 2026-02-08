@@ -18,4 +18,4 @@ Zmiana działa poprawnie.
 
 Zasady:
 - Nie zmieniaj kodu.
-- Zrób commit i push.
+- Zrób commit. Jeśli w repozytorium jest ustawiony remote-url to zrób push.
