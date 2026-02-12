@@ -22,6 +22,12 @@
 - “Zasady pracy agent-first / review loop”: `docs/agent-first.md`
 - “Plany wykonawcze i log decyzji”: `plans/`
 
+## Struktura kodu (kontrakt)
+
+- Kod aplikacji musi znajdować się w `src/<project_slug>/`
+- Nazwa `<project_slug>` musi być zgodna z `project.name` w `pyproject.toml`
+- Nie wolno umieszczać kodu aplikacyjnego w root repo
+
 ## Invariants (nie negocjuj)
 - Nie zgaduj brakujących kształtów danych: waliduj na granicach lub korzystaj z typowanych SDK.
 - Bez refactorów poza zakresem milestone’u.

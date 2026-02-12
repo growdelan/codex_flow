@@ -32,7 +32,8 @@ Klucz: repo jest **systemem prawdy**. To, czego agent nie widzi w repo, “nie i
 
 ## Start nowego projektu (agent-first)
 1. Utwórz PRD wraz z GPT 
-2. Utwórz puste repo (tylko `README.md` z 1 zdaniem: “co to jest za produkt”).
+2. Utwórz puste repo `uv init <projekt>` (tylko `README.md` z 1 zdaniem: “co to jest za produkt”).
+3. w projekcie `uv add ruff`
 3. W Codex uruchom:
    - `/prompts:start-new-project`
    - `/prompts:generate-spec-from-prd` (po dodaniu `prd/000-initial-prd.md`)

@@ -7,3 +7,5 @@ echo "==> Lint"
 echo "==> Tests"
 ./scripts/test.sh
 
+echo "==> Smoke test"
+./scripts/smoke.sh
