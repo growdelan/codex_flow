@@ -11,7 +11,7 @@
 3. Jeśli coś jest niejasne: **najpierw doprecyzuj w repo** (docs/spec/roadmap/plans), dopiero potem kod.
 4. Pracuj w pętli:
    - plan → implementacja → testy/smoke → self-review → poprawki → repeat
-5. Jeśli narzędzia pozwalają: twórz PR, odpowiadaj na review, merge.
+5. Jeśli narzędzia pozwalają: twórz PR, odpowiadaj na review, merge (ale dopiero po przejściu `uv run scripts/validate_knowledge_base.py`).
 6. Jeśli utknąłeś: zidentyfikuj brakującą “zdolność” (guardrail/docs/tool) i dodaj ją do repo.
 
 ## Gdzie szukać czego
@@ -30,6 +30,9 @@
   - uruchomienie aplikacji opisane w README (projektowym)
   - testy + smoke przechodzą lokalnie
   - aktualne `STATUS.md` i `ROADMAP.md`
+- **Invariant bazy wiedzy MUSI przechodzić przed PR**:
+  - przed otwarciem lub aktualizacją PR uruchom: `uv run scripts/validate_knowledge_base.py`
+  - jeśli check nie przechodzi: napraw wskazane problemy w tej samej gałęzi (AGENTS jako mapa + link do `docs/index.md`, frontmatter w `docs/*.md`, odświeżenie przeterminowanych `status: verified` lub zmiana na `draft`)
 
 ## Tooling (ogólne)
 - Używaj narzędzi repo (skrypty, CI, linters) zamiast ręcznych instrukcji.
