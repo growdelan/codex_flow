@@ -1,345 +1,76 @@
-# Codex Flow
+# Codex Flow (agent-first)
 
-## Konfiguracja Codex
-[Ściąga w postaci diagramu](diagram.md)
+Ten repo to **szablon pracy agent-first** z Codex:
+- **Human = intencja + kryteria + priorytety**
+- **Agent = wykonanie end-to-end** (kod, testy, CI, docs, refactor w zakresie, PR, odpowiedzi na review, merge)
 
-Skopiowanie zawartości z [.codex](https://github.com/growdelan/codex_flow/blob/main/.codex) do swojego `~/.codex/` (domyślnie wykorzstanie `Pythona` + `UV`)
-  
-## 1. PRD w GPT  
-  
-Poprosić o PRD do nowego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis:  
-```
-Jesteś ekspertem w tworzeniu dokumentów PRD (Product Requirements Document) dla aplikacji.
-
-Chciałbym stworzyć PRD dla [nazwa lub krótki opis produktu/usługi]. 
-
-Przeprowadź ze mną wywiad – zadawaj mi pytania jedno po drugim, aż poznasz cały potrzebny kontekst do stworzenia dokumentu dla mojej aplikacji. 
-
-Gdy będziesz miał wystarczający kontekst, przejdź do utworzenia dokumentu w formacie markdown.
-```
-Na koniec poprosić aby podsumował cała aplikację tylko jednym zdaniem. (Przyda się za chwile)  
-  
-## 2. Utworzenie repozytorium projektu  
-* Tworzymy czyste repozytorium tylko z `README.md` i pobieramy na dysk.  
-* Po pobraniu edytujemy plik `README.md` i wklejamy do niego to pojedyncze zdanie na temat naszej aplikacji, które wygenerował `GPT`, i zapisujemy.
-
-> ⚠️ **UWAGA**  
-> Jeśli nie skopiowałeś zawartości [.codex](https://github.com/growdelan/codex_flow/blob/main/.codex) do `~/.codex/`,  
-> uruchom `Codex` a następnie wykonaj komendę `/init`.  
-> Spowoduje to utworzenie domyślnego pliku `AGENTS.md`.
-  
-Uruchamiamy Codex i wykonujemy prompt `/prompts:start-new-project`:  
-```
-Utwórz pliki `spec.md`, `ROADMAP.md` i `STATUS.md` jako szablony w ustalonym układzie.
-
-`spec.md` ma zawierać DOKŁADNIE poniższy szablon.
-Nie zmieniaj nazw sekcji, nagłówków ani kolejności.
-Nie uzupełniaj treści merytorycznej.
-
-====================
-# Specyfikacja techniczna
-
-## Cel
-Krótki opis celu aplikacji:
-- jaki problem rozwiązuje
-- dla kogo
-- w jakim zakresie (co jest poza zakresem)
+Klucz: repo jest **systemem prawdy**. To, czego agent nie widzi w repo, “nie istnieje”.
 
 ---
 
-## Zakres funkcjonalny (high-level)
-Opis funkcjonalności na wysokim poziomie:
-- kluczowe use-case’i
-- główne przepływy użytkownika
-- czego aplikacja **nie** robi
-
-Bez wchodzenia w szczegóły implementacyjne.
-
----
-
-## Architektura i przepływ danych
-Opis architektury na poziomie koncepcyjnym.
-
-1. Główne komponenty systemu
-2. Przepływ danych między komponentami
-3. Granice odpowiedzialności
+## Zasady nadrzędne (TL;DR)
+1. **Nie piszemy kodu ręcznie** (jeśli się da — 0 manual code).
+2. **AGENTS.md to mapa**, nie instrukcja na 1000 linijek.
+3. Wiedza żyje w `docs/` i jest weryfikowana mechanicznie (CI/lintery/zasady).
+4. Praca przebiega w pętli: **plan → implementacja → self-review → checks → agent-review → fix → repeat → merge**.
+5. Jeśli agent się wykłada: nie “try harder”, tylko **dodaj brakującą zdolność** (docs/tooling/guardrail) i każ agentowi to wdrożyć.
 
 ---
 
-## Komponenty techniczne
-Lista kluczowych komponentów technicznych i ich odpowiedzialności.
+## Struktura wiedzy w repo (system of record)
+- `spec.md` — high-level spec + decyzje techniczne
+- `ROADMAP.md` — milestones i DoD
+- `STATUS.md` — aktualny stan
+- `docs/` — repozytorium wiedzy (mapa, architektura, jakość, zasady)
+- `plans/` — plany wykonawcze i log decyzji dla większych zmian
+- `prd/` — PRD historyczne (niemutowalne)
+
+> Zasada: jeśli coś ustaliliście na czacie/spotkaniu — dopisz to do repo w `docs/` lub `spec.md`.
 
 ---
 
-## Decyzje techniczne
-Jawne decyzje techniczne wraz z uzasadnieniem.
-
-Każda decyzja powinna zawierać:
-- Decyzja:
-- Uzasadnienie:
-- Konsekwencje:
-
----
-
-## Jakość i kryteria akceptacji
-Wspólne wymagania jakościowe dla całego projektu.
+## Start nowego projektu (agent-first)
+1. Utwórz puste repo (tylko `README.md` z 1 zdaniem: “co to jest za produkt”).
+2. W Codex uruchom:
+   - `/prompts:start-new-project`
+   - `/prompts:generate-spec-from-prd` (po dodaniu `prd/000-initial-prd.md`)
+3. Następnie od razu uruchom:
+   - `/prompts:bootstrap-agent-first`
+   To stworzy `docs/` (mapę wiedzy), `plans/` oraz podstawowe reguły “jak pracujemy”.
 
 ---
 
-## Zasady zmian i ewolucji
-- zmiany funkcjonalne → aktualizacja `ROADMAP.md`
-- zmiany architektoniczne → aktualizacja tej specyfikacji
-- nowe zależności → wpis do `## Decyzje techniczne`
-- refactory tylko w ramach aktualnego milestone’u
+## Realizacja milestone’ów (agent-first)
+Dla każdego milestone’u:
+1. `/prompts:implement-milestone MILESTONE_ID=<id>`
+
+Agent ma obowiązek:
+- stworzyć/uzupełnić plan w `plans/`
+- zaimplementować wyłącznie zakres milestone’u
+- uruchomić testy + smoke
+- zrobić self-review (diff + checklist)
+- uruchomić pętlę napraw aż wszystkie checki przechodzą
+
+2. Po wykonaniu agent sam robi:
+- aktualizację `ROADMAP.md` / `STATUS.md` / (ew. `spec.md`)
+- commit, PR, push, a na końcu merge (jeśli narzędzia pozwalają)
 
 ---
 
-## Powiązanie z roadmapą
-- Szczegóły milestone’ów i ich statusy znajdują się w `ROADMAP.md`.
+## Nowy kontekst / kontynuacja
+- `/prompts:continue-project`  
+Agent czyta repo, wskazuje aktualny milestone, **nic nie implementuje**.
 
 ---
 
-## Status specyfikacji
-- Data utworzenia:
-- Ostatnia aktualizacja:
-- Aktualny zakres obowiązywania:
-
-====================
-
-`ROADMAP.md` ma zawierać DOKŁADNIE poniższy szablon.
-Nie zmieniaj struktury ani statusów.
-Nie uzupełniaj treści merytorycznej.
-
-====================
-# Roadmapa (milestones)
-
-## Statusy milestone’ów
-Dozwolone statusy:
-- planned
-- in_progress
-- done
-- blocked
+## Nowy PRD
+1. dodaj do `prd/<kolejny>.md`
+2. `/prompts:next-prd PRD_NAME=<plik.md>`
+3. potem standardowo `/prompts:implement-milestone ...`
 
 ---
 
-## Milestone 0.5: Minimal end-to-end slice (planned)
-
-Cel:
-- aplikacja uruchamia się
-- wykonuje jedno bardzo proste zadanie
-- zwraca poprawny wynik
-
-Definition of Done:
-- aplikację da się uruchomić jednym poleceniem (opisanym w README.md)
-- istnieje co najmniej jeden smoke test
-- testy przechodzą lokalnie
-- brak placeholderów w kodzie
-
-Zakres:
-- minimalny entrypoint aplikacji
-- minimalna logika domenowa
-- minimalna obsługa IO (jeśli dotyczy)
-- smoke test end-to-end
-
----
-
-## Milestone <numer>: <nazwa> (<status>)
-
-Cel:
-Definition of Done:
-Zakres:
-Uwagi:
-
-====================
-
-`STATUS.md` ma zawierać DOKŁADNIE poniższy szablon.
-Nie uzupełniaj treści merytorycznej.
-
-====================
-# Aktualny stan projektu
-
-## Co działa
-
-## Co jest skończone
-
-## Co jest w trakcie
-
-## Co jest następne
-
-## Blokery i ryzyka
-
-## Ostatnie aktualizacje
-
-====================
-
-Nie zmieniaj kodu.
-```
-Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.  
-  
-## 3. Rozpoczęcie projektu  
-W Repozytorium tworzymy katalog i plik `prd/000-initial-prd.md` z naszym PRD utworzonym przez `GPT` i zapisujemy w katalogu głównym.  
-  
-Następnie w Codex uruchamiamy prompt `/prompts:generate-spec-from-prd`:  
-```
-Na podstawie pliku `prd/000-initial-prd.md`:
-
-CZĘŚĆ 1 — Specyfikacja
-1. Wypełnij treścią istniejący plik `spec.md`, korzystając z jego OBECNEJ struktury.
-2. Nie zmieniaj nagłówków, nazw sekcji ani kolejności w `spec.md`.
-3. Uzupełnij każdą sekcję na poziomie wysokim (bez szczegółów implementacyjnych).
-4. Jeśli którejś sekcji nie da się uzupełnić na podstawie PRD:
-   - zostaw krótką notatkę `TODO` z opisem brakującej informacji.
-5. Decyzje techniczne wpisuj wyłącznie do sekcji `## Decyzje techniczne`
-   i tylko jeśli wynikają bezpośrednio z PRD.
-
-CZĘŚĆ 2 — Roadmapa
-6. Wypełnij istniejący plik `ROADMAP.md`, zachowując jego strukturę.
-7. Nie zmieniaj nazw sekcji ani dozwolonych statusów milestone’ów.
-8. Zachowaj Milestone 0.5 jako pierwszy element roadmapy.
-9. Dodaj kolejne milestone’y po Milestone 0.5.
-10. Każdy milestone musi zawierać:
-    - Cel
-    - Definition of Done
-    - Zakres
-
-Zasady:
-- Nie zmieniaj struktury `spec.md` ani `ROADMAP.md`.
-- Nie zmieniaj kodu.
-- Jeśli coś jest niejednoznaczne, użyj `TODO` zamiast zgadywania.
-```
-  
-Po tej czynności sprawdzamy pliki `spec.md` i `ROADMAP.md`. Jeśli coś trzeba poprawić zróbmy to, ale przez `Codex`, niech sam poprawi.  
-  
-## 4. Implemetacja Milestone 0.5 
-
-Sprawdzamy czy w `ROADMAP.md` znajduje się Milestone 0.5 jeśli tak implementujemy go `/prompts:implement-milestone-0-5`:  
-```
-Zaimplementuj Milestone 0.5 dokładnie zgodnie z `ROADMAP.md`.
-
-Zasady:
-- minimalna ilość kodu
-- brak optymalizacji
-- brak refactorów niezwiązanych z milestone’em
-- jeśli coś jest niejasne:
-  - podejmij najprostszą decyzję
-  - opisz ją w `spec.md` w sekcji `## Decyzje techniczne`
-
-Po zakończeniu:
-- upewnij się, że aplikacja się uruchamia
-- uruchom testy
-- zrób commit z czytelnym opisem
-```
-Po implementacji i sprawdzeniu czy działa czyli testy / ręczne uruchomienie i zatwierdzamy zmiany `/prompts:finalize-and-push-change`:  
-```
-Zmiana działa poprawnie.
-
-1. Zaktualizuj `ROADMAP.md`:
-   - oznacz wykonany milestone jako `done`
-
-2. Zaktualizuj `STATUS.md`:
-   - co działa
-   - co jest skończone
-   - co jest następne
-   - (jeśli istnieją) blokery
-
-3. Jeśli pojawiły się nowe decyzje:
-   - zaktualizuj `spec.md` (`## Decyzje techniczne`)
-
-Zasady:
-- Nie zmieniaj kodu.
-- Zrób commit i push.
-- Jeśli push nie jest możliwy, opisz dokładnie co należy wykonać ręcznie.
-```
-To będzie nasza baza na której będziemy pracować, takie nasze „Hello World” dla obecnego projektu.  
-  
-## 5. Praca z kolejnymi Milestone’ami  
-Każdy kolejny milestone wyzwalamy przez `/prompts:implement-milestone`:  
-```
-Zaimplementuj kolejny milestone z `ROADMAP.md`: Milestone $MILESTONE_ID
-
-Zasady:
-- realizuj wyłącznie zakres danego milestone’u
-- nie zmieniaj architektury bez wyraźnej potrzeby
-- jeśli zakres jest niejasny:
-  - najpierw doprecyzuj `ROADMAP.md` lub `spec.md`
-  - dopiero potem implementuj
-
-Po zakończeniu:
-- uruchom testy
-```
-I zatwierdzamy zmiany identycznie jak w przypadku Milestone 0.5 (==PO SPRAWDZENIU CZY DZIAŁA!==)  
-  
-## 6. Kończenie pracy w obrębie danego kontekstu  
-Gdy zdecydujemy się zakończyć pracę.  
-  
-Używamy promptu `/prompts:project-wrap-up`:  
-```
-Zrób porządek w projekcie:
-
-1. Zaktualizuj `ROADMAP.md`:
-   - statusy milestone’ów zgodnie z rzeczywistością
-2. Zaktualizuj `STATUS.md`:
-   - aktualny stan projektu
-3. Upewnij się, że wszystko jest commitowane.
-
-Zasady:
-- Nie zmieniaj kodu.
-```
-  
-## 7. Rozpoczęcie nowego kontekstu - np. Gdy mamy nowy PRD  
-Nowy kontekst rozpoczynamy promptem sprawdzającym czy Codex wie w jakim jest miejscu i co to za projekt `/prompts:continue-project`:  
-```
-To jest kontynuacja istniejącego projektu.
-
-Kontekst:
-- przeczytaj `spec.md`
-- przeczytaj `ROADMAP.md`
-- przeczytaj `STATUS.md`
-- zapoznaj się z aktualnym stanem repozytorium
-
-Zasady:
-- nie reinterpretuj wcześniejszych decyzji
-- nie zmieniaj architektury bez wyraźnej prośby
-- trzymaj się roadmapy
-
-Po przeczytaniu:
-- krótko streść projekt
-- wskaż aktualny milestone do realizacji
-- nic nie implementuj
-```
-Jeśli daliśmy nowy PRD, to aktualizujemy `spec.md `i `ROADMAP.md` promptem `/prompts:next-prd`  
-```
-Na podstawie nowej funkcjonalności opisanej w pliku `PRD.md`:
-
-## CZĘŚĆ 1 — Aktualizacja specyfikacji
-1. Zaktualizuj istniejący plik `spec.md`, korzystając z jego OBECNEJ struktury.
-2. Nie zmieniaj nagłówków, nazw sekcji ani kolejności w `spec.md`.
-3. Dodaj lub rozszerz treść tylko w sekcjach, których dotyczy nowe PRD.
-4. Nie usuwaj ani nie reinterpretuj wcześniejszych decyzji.
-5. Jeśli nowa funkcjonalność wymaga nowych decyzji technicznych:
-   - dodaj je do sekcji `## Decyzje techniczne`
-   - jasno zaznacz, że dotyczą nowej funkcjonalności.
-
-## CZĘŚĆ 2 — Aktualizacja roadmapy
-6. Zaktualizuj istniejący plik `ROADMAP.md`.
-7. Nie zmieniaj treści ani statusów istniejących milestone’ów.
-8. Dodaj nowe milestone’y wynikające z PRD:
-   - na końcu roadmapy
-   - z nowymi numerami
-9. Każdy nowy milestone musi zawierać:
-   - Cel
-   - Definition of Done
-   - Zakres
-10. Nowe milestone’y muszą być:
-    - spójne z istniejącą specyfikacją
-    - możliwe do realizacji iteracyjnie
-
-## Zasady ogólne:
-- Nie zmieniaj struktury `spec.md` ani `ROADMAP.md`.
-- Nie zmieniaj kodu.
-- Jeśli nowe PRD jest w konflikcie z istniejącą specyfikacją:
-  - opisz konflikt w `spec.md` (sekcja `## Decyzje techniczne`)
-  - nie rozwiązuj go samodzielnie.
-```
-Po tym zabiegu, powtarzamy standardowe kroki z implementacją poszczególnych milestone’ów.  
-
+## Reguła “promote to code”
+Jeśli powtarza się problem (styl, architektura, testy, naming, logowanie, drift):
+- nie dopisuj kolejnej linijki “proszę pamiętaj”
+- dopisz zasadę do `docs/quality.md` **i każ agentowi dodać mechaniczne sprawdzenie** (linter/test/CI)

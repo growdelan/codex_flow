@@ -19,3 +19,4 @@ Po przeczytaniu:
 - krótko streść projekt
 - wskaż aktualny milestone do realizacji
 - nic nie implementuj
+

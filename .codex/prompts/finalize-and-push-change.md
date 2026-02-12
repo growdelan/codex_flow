@@ -1,21 +1,23 @@
 ---
-description: Zatwierdzenie zmiany
+description: Finalizacja w trybie agent-first (update docs + PR/merge)
 ---
 
-Zmiana działa poprawnie.
+Finalizujesz zmianę w trybie agent-first.
 
-1. Zaktualizuj `ROADMAP.md`:
-   - oznacz wykonany milestone jako `done`
+1) Zweryfikuj DoD milestone’u:
+- testy przechodzą
+- smoke przechodzi
+- uruchomienie jest opisane w README projektu
+- brak TODO/placeholderów związanych ze zmianą
 
-2. Zaktualizuj `STATUS.md`:
-   - co działa
-   - co jest skończone
-   - co jest następne
-   - (jeśli istnieją) blokery
+2) Zaktualizuj:
+- `ROADMAP.md` → milestone na `done`
+- `STATUS.md` → co działa / co skończone / co następne / blokery
+- `spec.md` → `## Decyzje techniczne` (jeśli doszły nowe decyzje)
+- `docs/**` jeśli zmiana wpływa na zasady jakości lub architekturę
 
-3. Jeśli pojawiły się nowe decyzje:
-   - zaktualizuj `spec.md` (`## Decyzje techniczne`)
+3) Commit + push.
+4) Jeśli możliwe: otwórz PR, przejdź przez review i zmerguj.
 
 Zasady:
-- Nie zmieniaj kodu.
-- Zrób commit. Jeśli w repozytorium jest ustawiony remote-url to zrób push.
+- Nie zmieniaj kodu poza poprawkami wynikającymi z DoD (np. brakujące testy).
