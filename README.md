@@ -24,17 +24,19 @@ Klucz: repo jest **systemem prawdy**. To, czego agent nie widzi w repo, “nie i
 - `docs/` — repozytorium wiedzy (mapa, architektura, jakość, zasady)
 - `plans/` — plany wykonawcze i log decyzji dla większych zmian
 - `prd/` — PRD historyczne (niemutowalne)
+- `src/` - aplikacja
 
 > Zasada: jeśli coś ustaliliście na czacie/spotkaniu — dopisz to do repo w `docs/` lub `spec.md`.
 
 ---
 
 ## Start nowego projektu (agent-first)
-1. Utwórz puste repo (tylko `README.md` z 1 zdaniem: “co to jest za produkt”).
-2. W Codex uruchom:
+1. Utwórz PRD wraz z GPT 
+2. Utwórz puste repo (tylko `README.md` z 1 zdaniem: “co to jest za produkt”).
+3. W Codex uruchom:
    - `/prompts:start-new-project`
    - `/prompts:generate-spec-from-prd` (po dodaniu `prd/000-initial-prd.md`)
-3. Następnie od razu uruchom:
+4. Następnie od razu uruchom:
    - `/prompts:bootstrap-agent-first`
    To stworzy `docs/` (mapę wiedzy), `plans/` oraz podstawowe reguły “jak pracujemy”.
 
