@@ -11,7 +11,7 @@ Twoje zadanie nie polega na tworzeniu tych plików, tylko na ich dopasowaniu do 
 
 1) Sprawdź, że istnieją:
 - `AGENTS.md`
-- `docs/INDEX.md`
+- `docs/index.md`
 - `docs/product.md`
 - `docs/quality.md`
 - `docs/architecture.md`
@@ -30,7 +30,7 @@ Maks 10–20 linii, konkretnie: co, dla kogo, use-case, poza zakresem.
 - jeśli nie ma danych, zostaw TODO + napisz dokładnie gdzie to doprecyzować (np. `spec.md`)
 
 4) Zweryfikuj spójność mapy:
-- `docs/INDEX.md` ma linki do realnie istniejących plików
+- `docs/index.md` ma linki do realnie istniejących plików
 - jeśli `spec.md`/`STATUS.md`/`ROADMAP.md` nie istnieją, dopisz w INDEX “TODO: add …” zamiast linku do nieistniejącego pliku
 
 5) Commit:

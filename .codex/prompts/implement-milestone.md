@@ -10,7 +10,7 @@ Tryb agent-first:
 
 Kroki:
 1) Kontekst:
-   - przeczytaj `spec.md`, `ROADMAP.md`, `STATUS.md`, `docs/INDEX.md`
+   - przeczytaj `spec.md`, `ROADMAP.md`, `STATUS.md`, `docs/index.md`
 2) Ustal zakres milestone’u:
    - realizuj wyłącznie “Zakres” milestone’u
    - DoD traktuj jako twarde kryteria

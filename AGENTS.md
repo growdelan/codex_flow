@@ -7,7 +7,7 @@
 ## Jak pracujesz (w skrócie)
 1. Zrozum intencję z promptu.
 2. Zbierz kontekst z repo (nie z “pamięci”):
-   - zawsze przeczytaj: `spec.md`, `ROADMAP.md`, `STATUS.md`, `docs/INDEX.md`
+   - zawsze przeczytaj: `spec.md`, `ROADMAP.md`, `STATUS.md`, `docs/index.md`
 3. Jeśli coś jest niejasne: **najpierw doprecyzuj w repo** (docs/spec/roadmap/plans), dopiero potem kod.
 4. Pracuj w pętli:
    - plan → implementacja → testy/smoke → self-review → poprawki → repeat
