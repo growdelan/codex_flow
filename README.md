@@ -43,7 +43,12 @@ To będzie nasza baza na której będziemy pracować, takie nasze „Hello World
 ## 5. Praca z kolejnymi Milestone’ami  
 Każdy kolejny milestone wyzwalamy przez `/prompts:implement-milestone` 
 
-I zatwierdzamy zmiany identycznie jak w przypadku Milestone 0.5 (==PO SPRAWDZENIU CZY DZIAŁA!==)  
+**Opcjonalnie**
+Uruchamiamy:
+- `/prompts:self-review` - jeśli chcemy sprawdzić czy są niespójności i złamanie zasad.
+- `/prompts:apply-self-review-fixes` - jeśli wyszły jakieś niesójności/żlamanie zasad.
+
+I zatwierdzamy zmiany identycznie jak w przypadku Milestone 0.5 (==PO SPRAWDZENIU CZY DZIAŁA!==) `/prompts:finalize-and-push-change`  
   
 ## 6. Kończenie pracy w obrębie danego kontekstu  
 Gdy zdecydujemy się zakończyć pracę.  
