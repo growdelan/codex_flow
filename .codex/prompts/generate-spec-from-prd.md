@@ -6,8 +6,8 @@ Na podstawie pliku `prd/000-initial-prd.md`:
 
 ## ETAP 0 --- Ocena zmiany
 
-0.1. Oceń zakres PRD: **MAŁY / ŚREDNI / DUŻY**
-0.2. Oceń czy zawiera istotne ryzyka lub niejasności.
+0.1. Oceń zakres PRD: **MAŁY / ŚREDNI / DUŻY**\
+0.2. Oceń czy zawiera istotne ryzyka lub niejasności.\
 0.3. Nie zapisuj tej oceny do plików --- użyj jej wyłącznie do
 kalibracji roadmapy.
 

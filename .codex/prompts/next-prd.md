@@ -7,9 +7,9 @@ Na podstawie pliku `prd/$PRD_NAME`:
 
 ## ETAP 0 --- Ocena zmiany
 
-0.1. Oceń zakres zmiany: **MAŁY / ŚREDNI / DUŻY**
-0.2. Oceń czy wpływa na istniejące milestone'y.
-0.3. Oceń czy istnieje potencjalny konflikt ze spec.
+0.1. Oceń zakres zmiany: **MAŁY / ŚREDNI / DUŻY**\
+0.2. Oceń czy wpływa na istniejące milestone'y.\
+0.3. Oceń czy istnieje potencjalny konflikt ze spec.\
 0.4. Nie zapisuj tej oceny do plików.
 
 ------------------------------------------------------------------------
