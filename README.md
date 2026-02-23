@@ -44,6 +44,7 @@ To będzie nasza baza na której będziemy pracować, takie nasze „Hello World
 Każdy kolejny milestone wyzwalamy przez `/prompts:implement-milestone` 
 
 **Opcjonalnie**
+
 Uruchamiamy:
 - `/prompts:self-review` - jeśli chcemy sprawdzić czy są niespójności i złamanie zasad.
 - `/prompts:apply-self-review-fixes` - jeśli wyszły jakieś niesójności/żlamanie zasad.
