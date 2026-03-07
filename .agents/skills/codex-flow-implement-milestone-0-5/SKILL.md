@@ -1,5 +1,10 @@
 ---
-description: Implementuje milestone 05
+name: codex-flow-implement-milestone-0-5
+description: >
+  Użyj, gdy trzeba zaimplementować wyłącznie specjalny Milestone 0.5 z ROADMAP.md:
+  minimalny działający end-to-end slice, uruchomienie aplikacji i smoke test.
+  Ten skill dotyczy tylko bootstrapowego etapu projektu. Nie używaj go do
+  późniejszych milestone'ów ani do samej aktualizacji roadmapy.
 ---
 
 Zaimplementuj Milestone 0.5 dokładnie zgodnie z `ROADMAP.md`.

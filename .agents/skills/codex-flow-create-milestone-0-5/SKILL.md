@@ -1,5 +1,10 @@
 ---
-description: Tworzy milestone 05 
+name: codex-flow-create-milestone-0-5
+description: >
+  Użyj, gdy trzeba dodać do ROADMAP.md specjalny początkowy Milestone 0.5
+  opisujący minimalny end-to-end slice projektu. Ten skill aktualizuje tylko
+  ROADMAP.md i nie implementuje kodu. Nie używaj go do zwykłych kolejnych
+  milestone'ów ani do realizacji Milestone 0.5.
 ---
 
 Dodaj do `ROADMAP.md` nowy milestone przed wszystkimi innymi:

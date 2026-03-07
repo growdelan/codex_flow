@@ -1,17 +1,23 @@
 ---
-description: Generuje z PRD nowe pliki spec.md i ROADMAP.md
+name: codex-flow-generate-spec-from-prd
+description: >
+  Użyj, gdy w projekcie pojawia się pierwszy lub główny PRD, na podstawie którego
+  trzeba wypełnić albo wygenerować zawartość spec.md i ROADMAP.md bez zmiany kodu.
+  Wejściem jest bazowy plik PRD w katalogu prd, a wyjściem są spójne aktualizacje
+  specyfikacji i roadmapy. Nie używaj tego skilla do kolejnych przyrostowych PRD,
+  które tylko rozszerzają istniejący plan.
 ---
 
 Na podstawie pliku `prd/000-initial-prd.md`:
 
 ## ETAP 0 --- Ocena zmiany
 
-0.1. Oceń zakres PRD: **MAŁY / ŚREDNI / DUŻY**\
-0.2. Oceń czy zawiera istotne ryzyka lub niejasności.\
+0.1. Oceń zakres PRD: **MAŁY / ŚREDNI / DUŻY**  
+0.2. Oceń czy zawiera istotne ryzyka lub niejasności.  
 0.3. Nie zapisuj tej oceny do plików --- użyj jej wyłącznie do
 kalibracji roadmapy.
 
-------------------------------------------------------------------------
+---
 
 ## ETAP 1 --- Specyfikacja
 
@@ -20,14 +26,11 @@ kalibracji roadmapy.
 3. Uzupełnij sekcje na poziomie wysokim (bez szczegółów implementacyjnych).
 4. Jeśli brakuje informacji, dodaj:
 
-```{=html}
-<!-- -->
-```
     TODO: [KONKRETNE PYTANIE DO DOPRECYZOWANIA]
 
 5. Decyzje techniczne wpisuj wyłącznie do sekcji `## Decyzje techniczne` i tylko jeśli wynikają bezpośrednio z PRD.
 
-------------------------------------------------------------------------
+---
 
 ## ETAP 2 --- Roadmapa
 
@@ -42,7 +45,7 @@ kalibracji roadmapy.
 - rozbij implementację na mniejsze milestone'y
 - dodaj milestone redukujący ryzyko (spike / walidacja)
 
-------------------------------------------------------------------------
+---
 
 ## ETAP 3 --- Sprawdzenie spójności
 
@@ -51,7 +54,7 @@ kalibracji roadmapy.
 - czy nie ma sprzeczności
 - czy nie ma elementów w roadmapie, których nie ma w spec
 
-------------------------------------------------------------------------
+---
 
 ## Zasady ogólne
 
@@ -59,4 +62,3 @@ kalibracji roadmapy.
 - Nie zmieniaj kodu.
 - Nie zgaduj brakujących informacji.
 - Generuj konkretne pytania zamiast domysłów.
-

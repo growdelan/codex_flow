@@ -1,5 +1,10 @@
 ---
-description: Zatwierdzenie zmiany
+name: codex-flow-finalize-and-push-change
+description: >
+  Użyj po zakończeniu implementacji, gdy zmiana działa i trzeba domknąć pracę:
+  zaktualizować ROADMAP.md, STATUS.md i ewentualnie spec.md, a następnie zrobić
+  commit oraz push, jeśli repozytorium ma skonfigurowany remote. Ten skill nie
+  służy do implementacji kodu ani planowania zmian.
 ---
 
 Zmiana działa poprawnie.

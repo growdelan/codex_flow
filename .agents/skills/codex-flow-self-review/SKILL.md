@@ -1,7 +1,11 @@
 ---
-description: "sprawdza samego siebie aby znaleźć niespójności i złamanie zasad"
+name: codex-flow-self-review
+description: >
+  Użyj po zakończeniu implementacji, gdy trzeba wykonać przegląd własnych
+  ostatnich zmian pod kątem zgodności z ROADMAP.md, spec.md i AGENTS.md oraz
+  jakości kodu. Niczego jeszcze nie zmieniaj — tylko wypisz problemy i
+  zaproponuj konkretne poprawki. Nie używaj do wdrażania poprawek.
 ---
-
 
 Wykonaj self-review ostatnich zmian.
 
