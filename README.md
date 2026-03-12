@@ -17,7 +17,7 @@ Na koniec poprosić aby podsumował cała aplikację tylko jednym zdaniem. (Przy
 ## 2. Utworzenie repozytorium projektu  
 * Tworzymy czyste repozytorium tylko z `README.md` i pobieramy na dysk.  
 * Po pobraniu edytujemy plik `README.md` i wklejamy do niego to pojedyncze zdanie na temat naszej aplikacji, które wygenerował `GPT`, i zapisujemy.
-* Kopiujemy do środka zawartość tego repozytorium `codex_flow` z pominięciem `README.md` 
+* Kopiujemy do środka zawartość tego repozytorium `codex_flow` z pominięciem `README.md`, `.gitignore` i `.git` 
 
 Uruchamiamy Codex.
 Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.  
