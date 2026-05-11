@@ -2,7 +2,7 @@
 
 ## 1. PRD
    
-Poprosić o PRD (koniecznie w trybie `plan`) do nowego/istniejącego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis, oraz końcówkę czy wypełniamy pierwszy PRD czy tworzymy kolejny:  
+Uruchom Codex i poprosić o PRD (koniecznie w trybie `plan`) do nowego/istniejącego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis, oraz końcówkę czy wypełniamy pierwszy PRD czy tworzymy kolejny:  
 ```
 Stwórz PRD dla  nowej funkcjonalności - chcę aby każdy kolejny poziom wcięcia, był na mapie myśli prezentowany innym kolorem kropki, aktualnie wygląda to tak jak na załączonym screen, że wszystkie kolejne poziomy mają pururową kropkę.
 
@@ -17,13 +17,10 @@ Na koniec **jeśli to pierwsze PRD** poproś aby podsumował cała aplikację ty
 * Po pobraniu edytujemy plik `README.md` i wklejamy do niego to pojedyncze zdanie na temat naszej aplikacji, które wygenerował `GPT`, i zapisujemy.
 * Kopiujemy do środka zawartość tego repozytorium `codex_flow` z pominięciem `README.md`, `.gitignore` i `.git` 
 
-Uruchamiamy Codex.
 Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.  
   
 ## 3. Rozpoczęcie projektu  
-W Repozytorium wypełniamy plik `prd/000-initial-prd.md` z naszym PRD utworzonym przez `GPT` i zapisujemy.  
-  
-Następnie w Codex uruchamiamy skill `$codex-flow-generate-spec-from-prd`
+W Codex uruchamiamy skill `$codex-flow-generate-spec-from-prd`
   
 Po tej czynności sprawdzamy pliki `spec.md` i `ROADMAP.md`. Jeśli coś trzeba poprawić zróbmy to, ale przez `Codex`, niech sam poprawi.  
   
