@@ -1,6 +1,13 @@
 # Codex Flow
 
-## 1. PRD
+## 1. Utworzenie repozytorium projektu  
+* Tworzymy czyste repozytorium tylko z `README.md` i pobieramy na dysk.  
+* Po pobraniu edytujemy plik `README.md` i wklejamy do niego to pojedyncze zdanie na temat naszej aplikacji, które wygenerował `GPT`, i zapisujemy.
+* Kopiujemy do środka zawartość tego repozytorium `codex_flow` z pominięciem `README.md`, `.gitignore` i `.git` 
+
+Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.  
+
+## 2. PRD
    
 Uruchom Codex i poprosić o PRD (koniecznie w trybie `plan`) do nowego/istniejącego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis, oraz końcówkę czy wypełniamy pierwszy PRD czy tworzymy kolejny:  
 ```
@@ -11,14 +18,7 @@ Przeprowadź ze mną wywiad – zadawaj mi pytania jedno po drugim, aż poznasz 
 Gdy będziesz miał wystarczający kontekst, przejdź [do wypełnienia pliku @prd/000-initial-prd.md]/[do utworzenia kolejnego pliku PRD w katalogu prd daj mu odpowiedni numer i nazwę]
 ```
 Na koniec **jeśli to pierwsze PRD** poproś aby podsumował cała aplikację tylko jednym zdaniem. (Przyda się za chwile)  
-  
-## 2. Utworzenie repozytorium projektu  
-* Tworzymy czyste repozytorium tylko z `README.md` i pobieramy na dysk.  
-* Po pobraniu edytujemy plik `README.md` i wklejamy do niego to pojedyncze zdanie na temat naszej aplikacji, które wygenerował `GPT`, i zapisujemy.
-* Kopiujemy do środka zawartość tego repozytorium `codex_flow` z pominięciem `README.md`, `.gitignore` i `.git` 
 
-Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.  
-  
 ## 3. Rozpoczęcie projektu  
 W Codex uruchamiamy skill `$codex-flow-generate-spec-from-prd`
   
