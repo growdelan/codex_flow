@@ -1,18 +1,16 @@
 # Codex Flow
 
-## 1. PRD w GPT  
+## 1. PRD
    
-Poprosić o PRD do nowego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis:  
+Poprosić o PRD do nowego/istniejącego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis, oraz końcówkę czy wypełniamy pierwszy PRD czy tworzymy kolejny:  
 ```
-Jesteś ekspertem w tworzeniu dokumentów PRD (Product Requirements Document) dla aplikacji.
-
-Chciałbym stworzyć PRD dla **[nazwa lub krótki opis produktu/usługi]**. 
+Stwórz PRD dla  nowej funkcjonalności - chcę aby każdy kolejny poziom wcięcia, był na mapie myśli prezentowany innym kolorem kropki, aktualnie wygląda to tak jak na załączonym screen, że wszystkie kolejne poziomy mają pururową kropkę.
 
 Przeprowadź ze mną wywiad – zadawaj mi pytania jedno po drugim, aż poznasz cały potrzebny kontekst do stworzenia dokumentu dla mojej aplikacji. 
 
-Gdy będziesz miał wystarczający kontekst, przejdź do utworzenia dokumentu w formacie markdown.
+Gdy będziesz miał wystarczający kontekst, przejdź [do wypełnienia pliku @prd/000-initial-prd.md]/[do utworzenia kolejnego pliku PRD w katalogu prd daj mu odpowiedni numer i nazwę]
 ```
-Na koniec poprosić aby podsumował cała aplikację tylko jednym zdaniem. (Przyda się za chwile)  
+Na koniec **jeśli to pierwsze PRD** poproś aby podsumował cała aplikację tylko jednym zdaniem. (Przyda się za chwile)  
   
 ## 2. Utworzenie repozytorium projektu  
 * Tworzymy czyste repozytorium tylko z `README.md` i pobieramy na dysk.  
@@ -61,6 +59,8 @@ Po tym zabiegu, powtarzamy standardowe kroki z implementacją poszczególnych mi
 
 ## 8. Uruchomienie wszystkich milestone'ów na raz
 
-Jeśli chcesz wykonać wszystkie milestone ze statusem `planned` w jednym przejściu, użyj dedykowanego promptu:
+Jeśli chcesz wykonać wszystkie milestone ze statusem `planned` w jednym przejściu, użyj dedykowanego promptu dla agentów (wymaga wyłączenia skilla `$codex-flow-implement-planned-batches`):
 
 [agents_all_milestones.md](prompts/agents_all_milestones.md)
+
+Jeśli nie chcesz używać agentów, użyj skilla `$codex-flow-implement-planned-batches`
