@@ -2,7 +2,7 @@
 
 ## 1. PRD
    
-Poprosić o PRD do nowego/istniejącego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis, oraz końcówkę czy wypełniamy pierwszy PRD czy tworzymy kolejny:  
+Poprosić o PRD (koniecznie w trybie `plan`) do nowego/istniejącego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis, oraz końcówkę czy wypełniamy pierwszy PRD czy tworzymy kolejny:  
 ```
 Stwórz PRD dla  nowej funkcjonalności - chcę aby każdy kolejny poziom wcięcia, był na mapie myśli prezentowany innym kolorem kropki, aktualnie wygląda to tak jak na załączonym screen, że wszystkie kolejne poziomy mają pururową kropkę.
 
