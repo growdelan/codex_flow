@@ -14,7 +14,7 @@ Stwórz PRD dla  nowej funkcjonalności - **[Tutaj opis aplikacji, albo tego co 
 
 Przeprowadź ze mną wywiad – zadawaj mi pytania jedno po drugim, aż poznasz cały potrzebny kontekst do stworzenia dokumentu dla mojej aplikacji. 
 
-Gdy będziesz miał wystarczający kontekst, przejdź [do wypełnienia pliku @prd/000-initial-prd.md]/[do utworzenia kolejnego pliku PRD w katalogu @prd daj mu odpowiedni numer i nazwę]
+Gdy będziesz miał wystarczający kontekst, przejdź [do wypełnienia pliku @prd/000-initial-prd.md]/[do utworzenia kolejnego pliku PRD w katalogu @prd i daj mu odpowiedni numer i nazwę]
 ```
 Na koniec **jeśli to pierwsze PRD** poproś aby podsumował cała aplikację tylko jednym zdaniem i to zdanie wklej do `README.md`
 
