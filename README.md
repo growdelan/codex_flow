@@ -10,7 +10,7 @@ Z tak przygotowanym repozytorium jesteśmy gotowi do pracy.
    
 Uruchom Codex i poprosić o PRD (koniecznie w trybie `plan`) do nowego/istniejącego projektu za pomocą promptu podmieniająć `[nazwa lub krótki opis produktu/usługi]` na własny opis, oraz końcówkę czy wypełniamy pierwszy PRD czy tworzymy kolejny:  
 ```
-Stwórz PRD dla  nowej funkcjonalności - chcę aby każdy kolejny poziom wcięcia, był na mapie myśli prezentowany innym kolorem kropki, aktualnie wygląda to tak jak na załączonym screen, że wszystkie kolejne poziomy mają pururową kropkę.
+Stwórz PRD dla  nowej funkcjonalności - **[Tutaj opis aplikacji, albo tego co chcemy dodać do instniejącej]**
 
 Przeprowadź ze mną wywiad – zadawaj mi pytania jedno po drugim, aż poznasz cały potrzebny kontekst do stworzenia dokumentu dla mojej aplikacji. 
 
